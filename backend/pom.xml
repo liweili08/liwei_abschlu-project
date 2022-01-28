@@ -8,7 +8,7 @@
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>de.neuefische</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>backend</name>
@@ -45,6 +45,9 @@
     </dependencies>
 
     <build>
+        <finalName>
+            liwei-abschluss-project
+        </finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
