@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import HomePage from "./pages/HomePage";
+import Thema from "./pages/Thema";
+import Grundlagen from "./pages/Grundlagen";
+import Beispiel from "./pages/Beispiel";
+import AufgabenGesamt from "./pages/AufgabenGesamt";
+import Aufgabe from "./pages/Aufgabe";
+import Ergebnis from "./pages/Ergebnis";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test Test
-        </a>
-      </header>
+     {/*<HomePage/>*/}
+        {/*<Thema/>*/}
+       {/* <Grundlagen/>*/}
+       {/* <Beispiel/>*/}
+       {/* <AufgabenGesamt/>*/}
+      {/*<Aufgabe/>*/}
+        <Ergebnis/>
     </div>
   );
 }
