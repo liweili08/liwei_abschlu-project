@@ -3,8 +3,9 @@
 export default function Grundlagen(){
     return(
         <div className="grundlagen">
-            <h1 className="folgen"> Grundlagen der Folgen </h1>
+            <h2> Grundlagen </h2>
             <ul>
+            {/* später dynamisch von DB mit map-Funktion zeigen  */}
             <li> Grenzwert </li>
 
             <li > Folge </li>
@@ -15,7 +16,7 @@ export default function Grundlagen(){
             <br/>
 
 
-            <button>Home</button> <button>Menü</button> <button>zurück</button>
+
 
         </div>
     )

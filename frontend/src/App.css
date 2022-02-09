@@ -6,8 +6,8 @@
 
 body{
   text-align: center;
-  background-color: #282c34;
-  color: antiquewhite;
+  background-color: #706d6d;
+  color: wheat;
 }
 
 
@@ -19,7 +19,7 @@ body{
 }*/
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3f3d3d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
