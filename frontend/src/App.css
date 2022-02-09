@@ -6,10 +6,13 @@
 
 body{
   text-align: center;
-  background-color: #706d6d;
-  color: wheat;
+  background-color: #605d5d;
+  color: lightgoldenrodyellow;
 }
 
+a{
+  color:lightgoldenrodyellow;
+}
 
 
 /*@media (prefers-reduced-motion: no-preference) {

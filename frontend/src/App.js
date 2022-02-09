@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route,Routes} from "react-router-dom";
+
 import HomePage from "./pages/HomePage";
 import Thema from "./pages/Thema";
 import Grundlagen from "./pages/Grundlagen";
@@ -7,20 +8,10 @@ import Beispiel from "./pages/Beispiel";
 import AufgabenGesamt from "./pages/AufgabenGesamt";
 import Aufgabe from "./pages/Aufgabe";
 import Ergebnis from "./pages/Ergebnis";
-import {BrowserRouter, Route,Routes} from "react-router-dom";
 import BeispieleGesamt from "./pages/BeispieleGesamt";
 
 function App() {
   return (
-    // <div className="App">
-   //  {/*<HomePage/>*/}
-    //    {/*<Thema/>*/}
-    //   {/* <Grundlagen/>*/}
-    //   {/* <Beispiel/>*/}
-    //   {/* <AufgabenGesamt/>*/}
-     // {/*<Aufgabe/>*/}
-     // {/*  <Ergebnis/>*/}
-      // {/*</div>*/}
       <BrowserRouter>
           <Routes>
               <Route path="/" element={<HomePage/>}/>
@@ -33,7 +24,9 @@ function App() {
                       <Route path="bsp3" element={<Beispiel/>}/>
                   </Route>
                   <Route path="aufgaben" element={<AufgabenGesamt/>}>
-                      <Route path="auf1" element={<Aufgabe/>}/>
+                      <Route path="auf1" element={<Aufgabe/>}>
+                          <Route path="ergebnis" element={<Ergebnis/>}/>
+                      </Route>
                       <Route path="auf2" element={<Aufgabe/>}/>
                       <Route path="auf3" element={<Aufgabe/>}/>
                   </Route>

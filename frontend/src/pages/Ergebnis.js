@@ -1,16 +1,16 @@
 
 export default function Ergebnis(){
     return(
-        <div className="ergebnis">
-            <h1 className="folgen"> Ergebnis </h1>
-        <h2> Ihre Antwort ist richtig/falsch </h2><br/>
+        <div >
+            <br/>
+            <h4 > Ergebnis </h4>
+        <h2 className="ergebnis"> Ihre Antwort ist richtig/falsch </h2><br/>
             {/* Nochmal die Aufgabenstellung */}
-            <h2>   Beispiel i : Berechnen Sie den Grenzwert von ... </h2>
+            <h6>   Beispiel i : Berechnen Sie den Grenzwert von ... </h6>
         {/* Lösungsweg */}
-            <h3> Lösung: </h3>
+            <h6> Lösung: </h6>
             <p> XXXXXXX YYYYYYYY</p>
             <br/>
-            <button>Home</button> <button>Menü</button> <button>zurück</button>
         </div>
     )
 }

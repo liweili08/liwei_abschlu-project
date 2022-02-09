@@ -1,13 +1,14 @@
 export default function Beispiel(){
     return(
-        <div className="beispiele">
+        <div>
             {/*Aufgabenstellung von DB */}
             {/*nicht center !!!!!! */}
             {/* später dynamisch: die nummer, Bsp und Lsg aus DB! */}
-             <h3>   Beispiel : Berechnen Sie den Grenzwert von ... </h3>
+            <br/>
+             <h6>   Beispiel : Berechnen Sie den Grenzwert von ... </h6>
             {/*Lösung: DB */}
             {/*nicht center !!!!!! nicht in app.css sondern einzeln */}
-            <h3 className="lsg"> Lösung: </h3>
+            <h6 className="lsg"> Lösung: </h6>
             <p> XXXXXXX YYYYYYYY</p>
 
 
