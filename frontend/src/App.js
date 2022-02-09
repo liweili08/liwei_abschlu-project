@@ -27,8 +27,16 @@ function App() {
               {/*später mit map-Funktion "themaName" dynamisch bekommen*/}
               <Route path="/folgen" element={<Thema/>}>
                   <Route path="grundlagen" element={<Grundlagen/>}/>
-                  <Route path="beispiele" element={<BeispieleGesamt/>}/>
-                  <Route path="aufgaben" element={<AufgabenGesamt/>}/>
+                  <Route path="beispiele" element={<BeispieleGesamt/>}>
+                      <Route path="bsp1" element={<Beispiel/>}/>
+                      <Route path="bsp2" element={<Beispiel/>}/>
+                      <Route path="bsp3" element={<Beispiel/>}/>
+                  </Route>
+                  <Route path="aufgaben" element={<AufgabenGesamt/>}>
+                      <Route path="auf1" element={<Aufgabe/>}/>
+                      <Route path="auf2" element={<Aufgabe/>}/>
+                      <Route path="auf3" element={<Aufgabe/>}/>
+                  </Route>
               </Route>
               <Route path="/reihen" element={<Thema/>}/>
           </Routes>

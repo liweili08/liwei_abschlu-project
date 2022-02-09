@@ -2,20 +2,17 @@
 export default function Aufgabe(){
     return(
         <div className="beispiele">
-            <h1 className="folgen"> Beispiel  der Folgen </h1>
-
             {/*Aufgabenstellung von DB */}
             {/*nicht center !!!!!! */}
-            <h2>   Beispiel i : Berechnen Sie den Grenzwert von ... </h2>
+            <h3> Aufgabe i: Gegeben sei  ... </h3>
+
+            <p>Beurteilen Sie den Wahrheitswert der Aussage:</p>
+            <br/>
+            <button > wahr </button>  {" "} <button> falsch </button>
 
             <br/>
 
-            <button> wahr </button>  <button> falsch </button>
 
-            <br/>
-
-
-            <button>Home</button> <button>Menü</button> <button>zurück</button>
 
         </div>
     )

@@ -1,20 +1,20 @@
+import {Link,Outlet} from "react-router-dom";
 
 export default function BeispieleGesamt(){
     return(
         <div className="beispiele">
-            <h1 className="folgen"> Beispiele der Folgen </h1>
-            <ul>
-                <li> Beispiel 1 : Berechnen Sie den Grenzwert von ... </li>
+            <h2> Beispiele </h2> {/* kann weglassen wenn später mit Highlight */}
+            <ul> {/* wird später dynamisch mit map-Funktion listen   */}
+                <li> <Link to="bsp1">Beispiel 1:</Link> Berechnen Sie den Grenzwert von ...</li>
 
-                <li > Beispiel 2 : Berechnen Sie den Grenzwert von ... </li>
+                <li > <Link to="bsp2">Beispiel 2:</Link> Berechnen Sie den Grenzwert von ...</li>
 
-                <li > Beispiel 3 : Berechnen Sie den Grenzwert von ...</li>
+                <li > <Link to="bsp3">Beispiel 3:</Link> Berechnen Sie den Grenzwert von ...</li>
                 <li> ...</li>
+                <Outlet/>
             </ul>
-            <br/>
 
 
-            <button>Home</button> <button>Menü</button> <button>zurück</button>
 
         </div>
     )

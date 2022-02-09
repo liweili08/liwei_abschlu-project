@@ -1,6 +1,10 @@
-import {Link, Outlet, useParams} from "react-router-dom";
+import {Link, Outlet, useNavigate, useParams} from "react-router-dom";
 
 export default function Thema(){
+    const navigate = useNavigate()
+    const goHome = () => {
+        navigate("/")
+    }
     // const {themaName}=useParams()
     return(
         <div className="themaName">
@@ -19,7 +23,7 @@ export default function Thema(){
             <br/>
             <hr/>
             <Outlet/>
-            <button>Home</button>
+            <button onClick={goHome}>Home</button>
 
         </div>
     )
