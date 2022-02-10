@@ -9,7 +9,7 @@ export default function Thema() {
     // const {themaName}=useParams()
     return (
         <div className="themaName">
-            <h1>Folgen</h1>
+            <h1>Aussagenlogik</h1>
             {/*<h1> {themaName} </h1>*/}
             {/*            <h2 className="themaText"> Hier finden die theoritischen Grundlagen: </h2>
             <button className="grundlagen"> Grundlagen </button>

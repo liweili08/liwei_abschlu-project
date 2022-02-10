@@ -8,18 +8,11 @@ export default function HomePage(){
             <h1> XXX(App Name) </h1>
             <h2> Wählen Sie ein Thema: </h2>
             <ul className="themenListe">
-                <li><Link to="folgen">Folgen </Link> </li>
-                <li><Link to="reihen"> Reinen</Link> </li>
-                <li>Folgen </li>
+                <li><Link to="aussagenlogik"> Aussagenlogik </Link> </li>
+                <li><Link to="mengenlehre"> Mengenlehre </Link> </li>
+                <li><Link to="abbildungen"> Abbildungen </Link> </li>
                 <Outlet/>
             </ul>
-
-           {/* <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<HomePage/>}/>
-                    <Route path="themen" element={<Thema/>}/>
-                </Routes>
-            </BrowserRouter>*/}
 
         </div>
     )

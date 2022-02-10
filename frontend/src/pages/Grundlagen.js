@@ -1,3 +1,4 @@
+import {Link, Outlet} from "react-router-dom";
 
 
 export default function Grundlagen(){
@@ -6,13 +7,12 @@ export default function Grundlagen(){
             {/*<h2> Grundlagen </h2> /!* kann weglassen wenn später mit Highlight *!/*/}
             <ul>
             {/* später dynamisch von DB mit map-Funktion zeigen  */}
-            <li> Grenzwert </li>
+            <li> <Link to="aussage">Aussage</Link>  </li>
 
-            <li > Folge </li>
+            <li > Logische Verknüpfung </li>
 
-            <li > Sandwich-Theorem</li>
-                <li> ...</li>
             </ul>
+            <Outlet/>
             <br/>
 
 
