@@ -1,5 +1,6 @@
 import './App.css';
 import {BrowserRouter, Route,Routes} from "react-router-dom";
+import 'katex/dist/katex.min.css';
 
 import HomePage from "./pages/HomePage";
 import Thema from "./pages/Thema";
@@ -9,6 +10,7 @@ import AufgabenGesamt from "./pages/AufgabenGesamt";
 import Aufgabe from "./pages/Aufgabe";
 import Ergebnis from "./pages/Ergebnis";
 import BeispieleGesamt from "./pages/BeispieleGesamt";
+import Grundlage from "./pages/Grundlage";
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
           <Routes>
               <Route path="/" element={<HomePage/>}/>
               {/*später mit map-Funktion "themaName" dynamisch bekommen*/}
-              <Route path="/folgen" element={<Thema/>}>
-                  <Route path="grundlagen" element={<Grundlagen/>}/>
+              <Route path="/aussagenlogik" element={<Thema/>}>
+                  <Route path="grundlagen" element={<Grundlagen/>}>
+                      <Route path="aussage" element={<Grundlage/>}/>
+                  </Route>
                   <Route path="beispiele" element={<BeispieleGesamt/>}>
                       <Route path="bsp1" element={<Beispiel/>}/>
                       <Route path="bsp2" element={<Beispiel/>}/>
@@ -31,7 +35,8 @@ function App() {
                       <Route path="auf3" element={<Aufgabe/>}/>
                   </Route>
               </Route>
-              <Route path="/reihen" element={<Thema/>}/>
+              <Route path="/mengenlehre" element={<Thema/>}/>
+              <Route path="/abbildungen" element={<Thema/>}/>
           </Routes>
       </BrowserRouter>
 
