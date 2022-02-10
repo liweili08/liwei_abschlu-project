@@ -14,13 +14,6 @@ export default function HomePage(){
                 <Outlet/>
             </ul>
 
-           {/* <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<HomePage/>}/>
-                    <Route path="themen" element={<Thema/>}/>
-                </Routes>
-            </BrowserRouter>*/}
-
         </div>
     )
 }

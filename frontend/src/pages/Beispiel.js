@@ -8,16 +8,10 @@ export default function Beispiel(){
             {/*nicht center !!!!!! */}
             {/* später dynamisch: die nummer, Bsp und Lsg aus DB! */}
             <br/>
-             <h6>   Beispiel 1: Beurteilen Sie den Wahrheitswert von <TeX>{"(\\neg A)\\wedge B,"}
-             </TeX> wobei <TeX>{"A"}</TeX> <em>falsch</em> und <TeX>{"B"}</TeX> <em>wahr</em> ist. </h6>
-            {/*Lösung: DB */}
-            {/*nicht center !!!!!! nicht in app.css sondern einzeln */}
-            <h6 className="lsg"> Lösung: </h6>
-            <p>Die Aussage <TeX>{"(\\neg A)\\wedge B"}</TeX> ist wahr, da <TeX>{"\\neg A"}</TeX> und <TeX>{"B"}</TeX> beide
-                wahr sind und die Konjunktion zweier wahren Aussagen wahr ist.</p>
-
-
-
+             <p>Beispiel 1: Die Aussage <TeX>{"A"}</TeX> sei falsch und die Aussage <TeX>{"B"}</TeX> sei wahr.
+                 Dann ist die Aussage <TeX>{"(\\neg A)\\wedge B,"}</TeX>  wahr, da <TeX>{"\\neg A"}</TeX> und <TeX>{"B"}</TeX> beide
+                 wahr sind und die Konjunktion zweier wahren Aussagen wahr ist.
+             </p>
         </div>
     )
 }
