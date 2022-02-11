@@ -10,12 +10,8 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Homeworks {
+public class MathTheme {
     @Id
     String id;
-    String toTheme;
-    String subtopic;
-    String topic;
-    boolean result;
-    String solution;
+    String themeName;
 }
