@@ -1,10 +1,10 @@
 import {Link, Outlet} from "react-router-dom";
-import TeX from "@matejmazur/react-katex";
+
 
 
 export default function AufgabenGesamt(){
     return(
-        <div >
+        <div className="normal-link">
             <ul> {/* wird später dynamisch mit map-Funktion listen   */}
                 <li> <Link to="auf1">Aufgabe 1:</Link> Disjunktion und Negation
                 </li>

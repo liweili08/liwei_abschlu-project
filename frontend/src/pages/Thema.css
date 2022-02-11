@@ -1,0 +1,9 @@
+.nav nav-tabs{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.home a{
+    color:lightgoldenrodyellow !important;
+}

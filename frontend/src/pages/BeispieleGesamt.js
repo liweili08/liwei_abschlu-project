@@ -1,7 +1,5 @@
 import {Link, Outlet} from "react-router-dom";
 import 'katex/dist/katex.min.css';
-import TeX from '@matejmazur/react-katex';
-import 'katex/dist/katex.min.css';
 
 import "./BeispieleGesamt.css"
 
@@ -9,6 +7,7 @@ export default function BeispieleGesamt() {
     return (
         <div>
             {/*<h2> Beispiele </h2> /!* kann weglassen wenn später mit Highlight *!/*/}
+            <div className="normal-link">
             <ul className="beispiele"> {/* wird später dynamisch mit map-Funktion listen   */}
                 <li><Link to="bsp1">Beispiel 1:</Link> Negation und Konjunktion.
                 </li>
@@ -24,6 +23,7 @@ export default function BeispieleGesamt() {
 
                 <Outlet/>
             </ul>
+            </div>
             <br/>
 
 
