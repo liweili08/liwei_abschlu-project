@@ -11,6 +11,8 @@ import Aufgabe from "./pages/Aufgabe";
 import Ergebnis from "./pages/Ergebnis";
 import BeispieleGesamt from "./pages/BeispieleGesamt";
 import Grundlage from "./pages/Grundlage";
+import "bootstrap/dist/css/bootstrap.css"
+
 
 function App() {
   return (
