@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Basics {
+public class MathBasic {
     @Id
     String id;
     String toTheme;
