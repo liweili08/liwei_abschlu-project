@@ -15,10 +15,12 @@ import "bootstrap/dist/css/bootstrap.css"
 
 
 function App() {
+
+  //  state mit dem Themen
   return (
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<HomePage/>}/>
+              <Route path="/" element={<HomePage />}/> {/*props with themes hinter HomePage {etwas}*/}
               {/*später mit map-Funktion "themaName" dynamisch bekommen*/}
               <Route path="/aussagenlogik" element={<Thema/>}>
                   <Route path="grundlagen" element={<Grundlagen/>}>
