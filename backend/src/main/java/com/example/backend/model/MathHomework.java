@@ -15,7 +15,6 @@ import org.springframework.data.annotation.Id;
 public class MathHomework {
     @Id
     String id;
-    String toTheme;
     String subtopic;
     String topic;
     boolean result;

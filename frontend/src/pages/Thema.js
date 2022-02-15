@@ -2,13 +2,9 @@ import {Link, Outlet, useParams} from "react-router-dom";
 import MyNavLink from "../components/navis/MyNavLink";
 
 export default function Thema() {
-    // const navigate = useNavigate()
-    // const goHome = () => {
-    //     navigate("/")
-    // }
+    //themeName von url bekommen
      const {themeName}=useParams()
 
-    //const {themeList} = props;
     return (
         <div className="themaName">
             <h1 >{themeName}</h1>

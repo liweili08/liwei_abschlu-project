@@ -19,34 +19,46 @@ function App() {
 const[themeList, setThemeList]=useState([
     {id:"test1",
         themeName:"Bla",
-        basicList:[{id:"b1",name:"Defnition",content:"XXXXXXXYYYYY"}],
-    exampleList:[],
-        homeworkList:[]}]);
-  //  state mit dem Themen
+        basicList:[{id:"b1",name:"Defnition",content:"XXXXXXXYYYYY"},
+                   {id:"b2",name:"Defnition2",content:"WWWWWW"}],
+        exampleList:[{id:"ex1",subtopic:"Negation",example:"123123123"},
+                     {id:"ex2",subtopic:"Konjunktion",example:"456456456"}],
+        homeworkList:[{id:"hw1",subtopic:"Aussagen",topic:"Beurteilen Sie...",
+                        result:true,solution:"Lösung: yyyy"},
+                      {id:"hw2",subtopic:"Negation_und_Äquivalenz",
+                          topic:"Beurteilen Sie den Wahrheitsgehalt...",
+                              // "Gegeben seien die falsche Aussage <TeX>{\"A\"}</TeX> und die wahre Aussage <TeX>{\"B\"}</TeX>.\n" +
+                              // "Beurteilen Sie den Wahrheitsgehalt der Aussage <TeX>{\"A\\\\vee(\\\\neg B)\"}</TeX>.",
+                        result:false,solution:"Lösung: xxxx"}]},
+    {id:"test2",
+        themeName:"lalala",
+        basicList:[{id:"b2_1",name:"Defnition3",content:"xxxxx"},
+            {id:"b2_2",name:"Defnition4",content:"yyyyy"}],
+        exampleList:[{id:"ex3",subtopic:"kartesische_Produkt",example:"aaaaaaa"},
+            {id:"ex4",subtopic:"Konjunktion",example:"bbbbbb"}],
+        homeworkList:[{id:"hw2_1",subtopic:"Mengen",topic:"Gegeben seien...",
+                        result:true,solution:"Lösung: AAAAA"},
+                       {id:"hw1",subtopic:"Aussagen",topic:"Beurteilen Sie...",
+                         result:false,solution:"Lösung: BBBBB"}]}
+]);
+
   return (
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<HomePage themeList={themeList}/>}/> {/*props with themes hinter HomePage {etwas}*/}
-              {/*später mit map-Funktion "themaName" dynamisch bekommen*/}
+              <Route path="/" element={<HomePage themeList={themeList}/>}/>
               <Route path="/:themeName" element={<Thema/>}>
                   <Route path="grundlagen" element={<Grundlagen themeList={themeList}/>}>
                       <Route path=":name" element={<Grundlage themeList={themeList}/>}/>
                   </Route>
                   <Route path="beispiele" element={<BeispieleGesamt themeList={themeList}/>}>
-                      <Route path="bsp1" element={<Beispiel/>}/>
-                      <Route path="bsp2" element={<Beispiel/>}/>
-                      <Route path="bsp3" element={<Beispiel/>}/>
+                      <Route path=":subtopic" element={<Beispiel themeList={themeList}/>}/>
                   </Route>
-                  <Route path="aufgaben" element={<AufgabenGesamt/>}>
-                      <Route path="auf1" element={<Aufgabe/>}>
-                          <Route path="ergebnis" element={<Ergebnis/>}/>
+                  <Route path="aufgaben" element={<AufgabenGesamt  themeList={themeList}/>}>
+                      <Route path=":subtopic" element={<Aufgabe  themeList={themeList}/>}>
+                          <Route path="ergebnis" element={<Ergebnis themeList={themeList}/>}/>
                       </Route>
-                      <Route path="auf2" element={<Aufgabe/>}/>
-                      <Route path="auf3" element={<Aufgabe/>}/>
                   </Route>
               </Route>
-              <Route path="/mengenlehre" element={<Thema/>}/>
-              <Route path="/abbildungen" element={<Thema/>}/>
           </Routes>
       </BrowserRouter>
 
