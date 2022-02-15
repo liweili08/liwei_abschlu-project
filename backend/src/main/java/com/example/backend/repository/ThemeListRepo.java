@@ -8,5 +8,4 @@ import java.util.Optional;
 
 @Repository
 public interface ThemeListRepo extends MongoRepository<MathTheme,String> {
-    Optional<MathTheme> findByThemeName(String themeName);
 }
