@@ -3,7 +3,8 @@ import 'katex/dist/katex.min.css';
 
 import "./BeispieleGesamt.css"
 
-export default function BeispieleGesamt() {
+export default function BeispieleGesamt(props) {
+    //const
     return (
         <div>
             {/*<h2> Beispiele </h2> /!* kann weglassen wenn später mit Highlight *!/*/}

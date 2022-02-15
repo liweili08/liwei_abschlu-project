@@ -1,7 +1,8 @@
 import {Link, Outlet} from "react-router-dom";
 
 
-export default function HomePage() {
+export default function HomePage(props) {
+    const {themeList} = props;
     return (
         <div>
             <div className="page-header">
@@ -10,9 +11,10 @@ export default function HomePage() {
             </div>
             <h2> Wählen Sie ein Thema: </h2>
             <ul className="normal-link">
-                <li><Link to="aussagenlogik"> Aussagenlogik </Link></li>
-                <li><Link to="mengenlehre"> Mengenlehre </Link></li>
-                <li><Link to="abbildungen" > Abbildungen </Link></li>
+                {themeList.map((mathTheme) => {
+                    return (
+                        <li key={mathTheme.id}><Link to={mathTheme.themeName}> {mathTheme.themeName} </Link></li>)
+                })}
                 <Outlet/>
             </ul>
 

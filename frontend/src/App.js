@@ -12,21 +12,27 @@ import Ergebnis from "./pages/Ergebnis";
 import BeispieleGesamt from "./pages/BeispieleGesamt";
 import Grundlage from "./pages/Grundlage";
 import "bootstrap/dist/css/bootstrap.css"
+import {useState} from "react";
 
 
 function App() {
-
+const[themeList, setThemeList]=useState([
+    {id:"test1",
+        themeName:"Bla",
+        basicList:[{id:"b1",name:"Defnition",content:"XXXXXXXYYYYY"}],
+    exampleList:[],
+        homeworkList:[]}]);
   //  state mit dem Themen
   return (
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<HomePage />}/> {/*props with themes hinter HomePage {etwas}*/}
+              <Route path="/" element={<HomePage themeList={themeList}/>}/> {/*props with themes hinter HomePage {etwas}*/}
               {/*später mit map-Funktion "themaName" dynamisch bekommen*/}
-              <Route path="/aussagenlogik" element={<Thema/>}>
-                  <Route path="grundlagen" element={<Grundlagen/>}>
-                      <Route path="aussage" element={<Grundlage/>}/>
+              <Route path="/:themeName" element={<Thema/>}>
+                  <Route path="grundlagen" element={<Grundlagen themeList={themeList}/>}>
+                      <Route path=":name" element={<Grundlage themeList={themeList}/>}/>
                   </Route>
-                  <Route path="beispiele" element={<BeispieleGesamt/>}>
+                  <Route path="beispiele" element={<BeispieleGesamt themeList={themeList}/>}>
                       <Route path="bsp1" element={<Beispiel/>}/>
                       <Route path="bsp2" element={<Beispiel/>}/>
                       <Route path="bsp3" element={<Beispiel/>}/>

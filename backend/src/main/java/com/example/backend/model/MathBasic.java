@@ -15,7 +15,6 @@ import org.springframework.data.annotation.Id;
 public class MathBasic {
     @Id
     String id;
-    String toTheme;
     String name;
     String content;
 }
