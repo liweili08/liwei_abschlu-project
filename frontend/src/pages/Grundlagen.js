@@ -10,7 +10,6 @@ export default function Grundlagen(props) {
     if(!findTheme){
         return (<h1 >Thema nicht gefunden...</h1>)
     }
-    console.log(findTheme);
     return (
         <div className="grundlagen">
 
