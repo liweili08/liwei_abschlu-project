@@ -14,7 +14,7 @@ export default function Beispiel(props){
     return(
         <div>
             <br/>
-            {findExample.example};
+            <TeX>{findExample.example}</TeX>
         </div>
     )
 }

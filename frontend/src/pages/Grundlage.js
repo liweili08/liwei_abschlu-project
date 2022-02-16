@@ -1,4 +1,5 @@
 import {useParams} from "react-router-dom";
+import TeX from "@matejmazur/react-katex";
 
 export default function Grundlage(props) {
     const {themeList} = props;
@@ -12,7 +13,7 @@ export default function Grundlage(props) {
     return (
         <div>
             <br/>
-            {findBasic.content};
+            <TeX>{findBasic.content}</TeX>
         </div>
     )
 }

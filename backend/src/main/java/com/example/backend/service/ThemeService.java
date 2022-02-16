@@ -15,7 +15,8 @@ public class ThemeService {
         this.themeListRepo = themeListRepo;
     }
 
-    public List<MathTheme> getAllTheme() { return themeListRepo.findAll();
+    public List<MathTheme> getAllTheme() {
+        return themeListRepo.findAll();
     }
 
 }
