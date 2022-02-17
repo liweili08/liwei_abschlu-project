@@ -1,16 +1,27 @@
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
 
 
-export default function Grundlagen(){
-    return(
+export default function Grundlagen(props) {
+    const {themeList} = props;
+    const {themeName}=useParams();
+    const findTheme= themeList.find((mathTheme)=>{
+        return mathTheme.themeName=== themeName;
+    })
+    if(!findTheme){
+        return (<h1 >Thema nicht gefunden...</h1>)
+    }
+    return (
         <div className="grundlagen">
-            {/*<h2> Grundlagen </h2> /!* kann weglassen wenn später mit Highlight *!/*/}
-            <ul className="normal-link">
-            {/* später dynamisch von DB mit map-Funktion zeigen  */}
-            {/*<li> <Link to="aussage" className="link">Aussage</Link>  </li>*/}
 
-            {/*<li > Logische Verknüpfung </li>*/}
-                <li><Link to="aussage" className="link">Aussage</Link></li>
+            <ul className="normal-link">
+                {/*<li><Link to="aussage" className="link">Aussage</Link></li>*/}
+                {findTheme.basicList.map((mathBasic) => {
+                    return (
+                        <li key={mathBasic.id}><Link
+                            to={mathBasic.name}> {mathBasic.name}</Link>
+                        </li>
+                    )
+                })}
 
             </ul>
             <Outlet/>
