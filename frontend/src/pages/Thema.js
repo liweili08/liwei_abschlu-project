@@ -22,7 +22,6 @@ export default function Thema(props) {
             </ul>
             <br/>
             <Outlet/>
-            {/*<button onClick={goHome}>Home</button>*/}
             <div className="text-center">
             <div className="normal-link">
             <Link to="/">Home</Link>
