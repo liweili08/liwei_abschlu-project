@@ -1,18 +1,27 @@
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useParams} from "react-router-dom";
 
 
 
-export default function AufgabenGesamt(){
+export default function AufgabenGesamt(props){
+    const {themeList}=props;
+    const {themeName}=useParams();
+    const findTheme= themeList.find((mathTheme)=>{
+        return mathTheme.themeName=== themeName;
+    })
+    if(!findTheme){
+        return (<h1 >Thema nicht gefunden...</h1>)
+    }
     return(
         <div className="normal-link">
-            <ul> {/* wird später dynamisch mit map-Funktion listen   */}
-                <li> <Link to="auf1">Aufgabe 1:</Link> Disjunktion und Negation
-                </li>
-
-                {/*<li > <Link to="auf2">Aufgabe 2:</Link> Berechnen Sie den Grenzwert von ... </li>*/}
-
-                {/*<li > <Link to="auf3">Aufgabe 3:</Link> Berechnen Sie den Grenzwert von ...</li>*/}
-                <Outlet/>
+            <ul>
+                {findTheme.homeworkList.map((mathHomework) => {
+                    return (
+                        <li key={mathHomework.id}><Link
+                            to={mathHomework.subtopic}>Aufgabe: {mathHomework.subtopic}</Link>
+                        </li>
+                    )
+                })}
+            <Outlet/>
             </ul>
             <br/>
 

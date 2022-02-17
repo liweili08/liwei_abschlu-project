@@ -1,17 +1,20 @@
 import TeX from "@matejmazur/react-katex";
+import {useParams} from "react-router-dom";
 
 
-export default function Beispiel(){
+export default function Beispiel(props){
+    const {themeList} = props;
+    const {themeName, subtopic} = useParams();
+    const findTheme = themeList.find((mathTheme) => {
+        return mathTheme.themeName === themeName;
+    })
+    const findExample = findTheme.exampleList.find((mathExample) => {
+        return mathExample.subtopic === subtopic;
+    })
     return(
         <div>
-            {/*Aufgabenstellung von DB */}
-            {/*nicht center !!!!!! */}
-            {/* später dynamisch: die nummer, Bsp und Lsg aus DB! */}
             <br/>
-             <p>Beispiel 1: Die Aussage <TeX>{"A"}</TeX> sei falsch und die Aussage <TeX>{"B"}</TeX> sei wahr.
-                 Dann ist die Aussage <TeX>{"(\\neg A)\\wedge B,"}</TeX>  wahr, da <TeX>{"\\neg A"}</TeX> und <TeX>{"B"}</TeX> beide
-                 wahr sind und die Konjunktion zweier wahren Aussagen wahr ist.
-             </p>
+            <TeX>{findExample.example}</TeX>
         </div>
     )
 }
