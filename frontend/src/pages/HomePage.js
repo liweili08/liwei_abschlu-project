@@ -6,7 +6,7 @@ export default function HomePage(props) {
     return (
         <div>
             <div className="page-header">
-                <h1>XXX<small>(App Name)</small></h1>
+                <h1>HöMApp</h1>
                 <hr/>
             </div>
             <h2> Wählen Sie ein Thema: </h2>
