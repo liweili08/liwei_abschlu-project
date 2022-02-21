@@ -1,6 +1,12 @@
 body{
+  text-align: center;
+  margin-top: 40px;
   background-color: #605d5d !important;
   color: lightgoldenrodyellow !important;
+}
+.App{
+  text-align: center;
+  margin-top: 60px;
 }
 
 /*.link {*/

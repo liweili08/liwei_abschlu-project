@@ -11,7 +11,6 @@ import Aufgabe from "./pages/Aufgabe";
 import Ergebnis from "./pages/Ergebnis";
 import BeispieleGesamt from "./pages/BeispieleGesamt";
 import Grundlage from "./pages/Grundlage";
-import "bootstrap/dist/css/bootstrap.css"
 import {useEffect, useState} from "react";
 import {getThemeList} from "./service/ApiService";
 
@@ -42,9 +41,6 @@ function App() {
             </Routes>
         </BrowserRouter>
 
-        /* <div>
-             <HomePage/>
-         </div>*/
     );
 }
 

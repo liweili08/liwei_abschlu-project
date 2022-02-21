@@ -1,5 +1,5 @@
 import {Link, Outlet, useParams} from "react-router-dom";
-import MyNavLink from "../components/navis/MyNavLink";
+//import MyNavLink from "../components/navis/MyNavLink";
 
 export default function Thema(props) {
     const {themeList}=props;
@@ -16,17 +16,17 @@ export default function Thema(props) {
         <div className="themaName">
             <h1 >{themeName}</h1>
             <ul className="nav nav-tabs">
-                <li><MyNavLink to="grundlagen">Grundlagen</MyNavLink></li>
-                <li><MyNavLink to="beispiele">Beispiele</MyNavLink></li>
-                <li><MyNavLink to="aufgaben">Aufgaben</MyNavLink></li>
+                <li><Link to="grundlagen">Grundlagen</Link></li>
+                <li><Link to="beispiele">Beispiele</Link></li>
+                <li><Link to="aufgaben">Aufgaben</Link></li>
             </ul>
             <br/>
             <Outlet/>
-            <div className="text-center">
+
             <div className="normal-link">
             <Link to="/">Home</Link>
             </div>
-            </div>
+
         </div>
     )
 
