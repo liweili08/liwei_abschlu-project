@@ -41,12 +41,11 @@ body {
 
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 50px;
+    bottom: 0.5em;
 }
 
 .home-link {
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 .home-link a {

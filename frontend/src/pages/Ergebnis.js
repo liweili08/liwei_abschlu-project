@@ -11,29 +11,9 @@ export default function Ergebnis(props){
         return mathHomework.subtopic === subtopic;
     })
     return(
-        <div >
-            <br/>
+        <div className="templet2">
             <TeX>{findHomework.solution}</TeX>
-            <br/>
         </div>
     )
 }
 
-/*
-export default function Ergebnis(props){
-    const {themeList}=props;
-    const {themeName, subtopic} = useParams();
-    const findTheme = themeList.find((mathTheme) => {
-        return mathTheme.themeName === themeName;
-    })
-    const findHomework = findTheme.homeworkList.find((mathHomework) => {
-        return mathHomework.subtopic === subtopic;
-    })
-    return(
-        <div >
-            <br/>
-            <TeX>{findHomework.solution}</TeX>
-            <br/>
-        </div>
-    )
-}*/

@@ -2,7 +2,7 @@ import {Link, Outlet} from "react-router-dom";
 
 import {Divider, ThemeProvider, Typography} from "@mui/material";
 
-import "./HomePage.css"
+import "../styles/HomePage.css"
 import {createTheme} from "@mui/material/styles";
 
 const theme=createTheme({

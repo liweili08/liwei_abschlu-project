@@ -1,12 +1,12 @@
 import {Link, Outlet, useParams} from "react-router-dom";
-import "./Thema.css"
+import "../styles/Thema.css"
 import {Breadcrumbs, Divider} from "@mui/material";
 
 function handleClick(event) {
     event.preventDefault();
 }
 
-export default function Thema(props) {
+export default function Theme(props) {
     const {themeList} = props;
     //themeName von url bekommen
     const {themeName} = useParams()

@@ -1,11 +1,10 @@
 import {Link} from "react-router-dom";
 
-export default function RightAnswer() {
+export default function NoAnswer() {
     return (
         <div>
-            <h2 className="ergebnis"> Ihre Antwort ist richtig! </h2>
+            <p>Versuchen Sie die Aufgabe selbst zu lösen!</p>
             <Link to="ergebnis">Erklärung</Link>
-
         </div>
     )
 }

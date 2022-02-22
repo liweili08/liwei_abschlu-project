@@ -1,11 +1,11 @@
 import {Outlet, useParams} from "react-router-dom";
 import TeX from "@matejmazur/react-katex";
 import {useEffect, useState} from "react";
-import WrongAnswer from "./WrongAnswer";
-import RightAnswer from "./RightAnswer";
-import "./Aufgabe.css";
+import WrongAnswer from "../components/WrongAnswer";
+import RightAnswer from "../components/RightAnswer";
+import NoAnswer from "../components/NoAnswer";
+import "../styles/Aufgabe.css";
 
-//test
 function AufgabeContent(props) {
     const {findHomework} = props;
     const [buttonClick, setButtonClick] = useState(undefined);
@@ -22,7 +22,7 @@ function AufgabeContent(props) {
 
     let answer;
     if (buttonClick === undefined) {
-        answer = <p>Versuchen Sie die Aufgabe selbst zu lösen!</p>
+        answer = <NoAnswer/>
     } else if (findHomework.result === buttonClick) {
         answer = <RightAnswer/>
     } else {
@@ -31,18 +31,15 @@ function AufgabeContent(props) {
 
     return (
         <div className="aufgabecontent">
-
             <div className="topic"><TeX>{findHomework.topic}</TeX></div>
-
             <button onClick={WahrButton}>wahr</button>
             <button onClick={WrongButton}>falsch</button>
-
             {answer}
             <Outlet/>
         </div>)
 }
 
-export default function Aufgabe(props) {
+export default function Homework(props) {
     const {themeList} = props;
     const {themeName, subtopic} = useParams();
     const findTheme = themeList.find((mathTheme) => {
