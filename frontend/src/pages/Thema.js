@@ -1,31 +1,43 @@
 import {Link, Outlet, useParams} from "react-router-dom";
-//import MyNavLink from "../components/navis/MyNavLink";
+import "./Thema.css"
+import {Breadcrumbs, Divider} from "@mui/material";
+
+function handleClick(event) {
+    event.preventDefault();
+}
 
 export default function Thema(props) {
-    const {themeList}=props;
+    const {themeList} = props;
     //themeName von url bekommen
-     const {themeName}=useParams()
-    const findName= themeList.find((mathTheme)=>{
-        return mathTheme.themeName=== themeName;
+    const {themeName} = useParams()
+    const findName = themeList.find((mathTheme) => {
+        return mathTheme.themeName === themeName;
     })
-    if(!findName){
-        return (<h1 >Thema nicht gefunden...</h1>)
+    if (!findName) {
+        return (<h1>Thema nicht gefunden...</h1>)
     }
 
     return (
-        <div className="themaName">
-            <h1 >{themeName}</h1>
-            <ul className="nav nav-tabs">
-                <li><Link to="grundlagen">Grundlagen</Link></li>
-                <li><Link to="beispiele">Beispiele</Link></li>
-                <li><Link to="aufgaben">Aufgaben</Link></li>
-            </ul>
-            <br/>
+        <div className="themeName">
+            <div className="theme-name"> {themeName} </div>
+            <div className="box1">
+                <div role="presentation" onClick={handleClick} className="navi-outer">
+                    <Breadcrumbs aria-label="breadcrumb">
+                        <Link underline="hover" color="inherit" to="grundlagen" className="navi-link">Grundlagen</Link>
+                        <Link underline="hover" color="inherit" to="beispiele" className="navi-link">Beispiele</Link>
+                        <Link underline="hover" color="inherit" to="aufgaben" className="navi-link">Aufgaben</Link>
+                    </Breadcrumbs>
+                </div>
+            </div>
+            <Divider color="lightgoldenrodyellow"/>
+
+            {/*<div className="push"></div>*/}
+
             <Outlet/>
 
-            <div className="normal-link">
-            <Link to="/">Home</Link>
-            </div>
+            <footer className="home-link">
+                <Link to="/">Home</Link>
+            </footer>
 
         </div>
     )

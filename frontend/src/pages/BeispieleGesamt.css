@@ -1,3 +1,25 @@
-ul{
-    list-style: none;
+.example {
+    width: 100%;
+    padding: 2em;
+    margin: auto;
 }
+
+.example-li {
+    height: 2em;
+    text-align: left;
+}
+
+.example-item {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.example-item:hover {
+    color: #ff6400;
+    font-size: 2.5em;
+}
+
+.example-item:visited {
+    color: #f8d0b7;
+}
+

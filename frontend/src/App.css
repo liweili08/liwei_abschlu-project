@@ -21,3 +21,6 @@ body{
   color: #ff6400;
 }
 
+ul{
+  list-style: none;
+}

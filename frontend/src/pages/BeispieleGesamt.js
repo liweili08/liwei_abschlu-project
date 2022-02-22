@@ -15,12 +15,12 @@ export default function BeispieleGesamt(props) {
     return (
         <div>
             <div className="normal-link">
-            <ul className="beispiele">
+            <ul className="example">
                 <br/>
                 {findTheme.exampleList.map((mathExample) => {
                     return (
-                        <li key={mathExample.id}><Link
-                            to={mathExample.subtopic}>Beispiel: {mathExample.subtopic}</Link>
+                        <li key={mathExample.id} className="example-li"><Link
+                            to={mathExample.subtopic} className="example-item">Beispiel: {mathExample.subtopic}</Link>
                         </li>
                     )
                 })}
