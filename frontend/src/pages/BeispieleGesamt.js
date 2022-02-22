@@ -1,7 +1,7 @@
 import {Link, Outlet, useParams} from "react-router-dom";
 import 'katex/dist/katex.min.css';
 
-import "./BeispieleGesamt.css"
+import "./templet1.css"
 
 export default function BeispieleGesamt(props) {
     const {themeList}=props;
@@ -15,12 +15,12 @@ export default function BeispieleGesamt(props) {
     return (
         <div>
             <div className="normal-link">
-            <ul className="example">
+            <ul className="templet1">
                 <br/>
                 {findTheme.exampleList.map((mathExample) => {
                     return (
-                        <li key={mathExample.id} className="example-li"><Link
-                            to={mathExample.subtopic} className="example-item">Beispiel: {mathExample.subtopic}</Link>
+                        <li key={mathExample.id} className="templet1-li"><Link
+                            to={mathExample.subtopic} className="templet1-item">Beispiel: {mathExample.subtopic}</Link>
                         </li>
                     )
                 })}

@@ -1,25 +1,24 @@
-.example {
+.templet1 {
     width: 100%;
     padding: 2em;
     margin: auto;
 }
 
-.example-li {
+.templet1-li {
     height: 2em;
     text-align: left;
 }
 
-.example-item {
+.templet1-item {
     font-size: 1em;
     text-decoration: none;
 }
 
-.example-item:hover {
-    color: #ff6400;
-    font-size: 2.5em;
+.templet1-item:hover {
+    font-size: 1.5em;
 }
 
-.example-item:visited {
+.templet1-item:visited {
     color: #f8d0b7;
 }
 

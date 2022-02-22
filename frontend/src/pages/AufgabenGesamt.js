@@ -13,11 +13,11 @@ export default function AufgabenGesamt(props){
     }
     return(
         <div className="normal-link">
-            <ul>
+            <ul className="templet1">
                 {findTheme.homeworkList.map((mathHomework) => {
                     return (
-                        <li key={mathHomework.id}><Link
-                            to={mathHomework.subtopic}>Aufgabe: {mathHomework.subtopic}</Link>
+                        <li key={mathHomework.id} className="templet1-li"><Link
+                            to={mathHomework.subtopic} className="templet1-item">Aufgabe: {mathHomework.subtopic}</Link>
                         </li>
                     )
                 })}
