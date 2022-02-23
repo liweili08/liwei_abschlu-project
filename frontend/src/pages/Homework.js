@@ -9,7 +9,7 @@ import {Button, Stack} from "@mui/material";
 
 function AufgabeContent(props) {
     const {findHomework} = props;
-    const [buttonClick, setButtonClick] = useState(undefined);
+    const [userAnswer, setUserAnswer] = useState(undefined);
     //notwendig: React erkennt nicht dass buttonClick zurückgesetzt werden muss.
     useEffect(() => setButtonClick(undefined), [findHomework]);
 
