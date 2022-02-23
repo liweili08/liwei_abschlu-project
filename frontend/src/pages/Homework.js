@@ -11,7 +11,7 @@ function AufgabeContent(props) {
     const {findHomework} = props;
     const [userAnswer, setUserAnswer] = useState(undefined);
     //notwendig: React erkennt nicht dass buttonClick zurückgesetzt werden muss.
-    useEffect(() => setButtonClick(undefined), [findHomework]);
+    useEffect(() => setUserAnswer(undefined), [findHomework]);
 
     let answer;
     if (buttonClick === undefined) {
