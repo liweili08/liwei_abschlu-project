@@ -8,7 +8,7 @@ import BasicList from "./pages/BasicList";
 import Example from "./pages/Example";
 import HomeworkList from "./pages/HomeworkList";
 import Homework from "./pages/Homework";
-import Ergebnis from "./pages/Ergebnis";
+import Solution from "./pages/Solution";
 import ExampleList from "./pages/ExampleList";
 import Basic from "./pages/Basic";
 import {useEffect, useState} from "react";
@@ -34,7 +34,7 @@ function App() {
                     </Route>
                     <Route path="aufgaben" element={<HomeworkList themeList={themeList}/>}>
                         <Route path=":subtopic" element={<Homework themeList={themeList}/>}>
-                            <Route path="ergebnis" element={<Ergebnis themeList={themeList}/>}/>
+                            <Route path="ergebnis" element={<Solution themeList={themeList}/>}/>
                         </Route>
                     </Route>
                 </Route>

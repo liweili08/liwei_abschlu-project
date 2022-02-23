@@ -21,10 +21,8 @@ export default function HomeworkList(props){
                         </li>
                     )
                 })}
-            <Outlet/>
             </ul>
-            <br/>
-
+            <Outlet/>
         </div>
     )
 }

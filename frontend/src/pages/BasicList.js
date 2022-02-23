@@ -15,15 +15,13 @@ export default function BasicList(props) {
             <ul className="templet1">
                 {findTheme.basicList.map((mathBasic) => {
                     return (
-                        <li key={mathBasic.id} className="templet1-li"><Link
-                            to={mathBasic.name} className="templet1-item"> {mathBasic.name}</Link>
+                        <li key={mathBasic.id} className="templet1-li">
+                            <Link to={mathBasic.name} className="templet1-item"> {mathBasic.name}</Link>
                         </li>
                     )
                 })}
-
             </ul>
             <Outlet/>
-            <br/>
         </div>
     )
 }

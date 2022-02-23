@@ -4,21 +4,14 @@ import {useEffect, useState} from "react";
 import WrongAnswer from "../components/WrongAnswer";
 import RightAnswer from "../components/RightAnswer";
 import NoAnswer from "../components/NoAnswer";
-import "../styles/Aufgabe.css";
+import "../styles/Homework.css";
+import {Button, Stack} from "@mui/material";
 
 function AufgabeContent(props) {
     const {findHomework} = props;
     const [buttonClick, setButtonClick] = useState(undefined);
     //notwendig: React erkennt nicht dass buttonClick zurückgesetzt werden muss.
     useEffect(() => setButtonClick(undefined), [findHomework]);
-
-    function WahrButton() {
-        setButtonClick(true);
-    }
-
-    function WrongButton() {
-        setButtonClick(false);
-    }
 
     let answer;
     if (buttonClick === undefined) {
@@ -30,10 +23,16 @@ function AufgabeContent(props) {
     }
 
     return (
-        <div className="aufgabecontent">
+        <div className="homework-content">
             <div className="topic"><TeX>{findHomework.topic}</TeX></div>
-            <button onClick={WahrButton}>wahr</button>
-            <button onClick={WrongButton}>falsch</button>
+            <div className="buttons">
+            <Stack direction="row" spacing={1}>
+                <Button variant="contained" size="small" color="success"
+                        onClick={()=>setButtonClick(true)}>wahr</Button>
+                <Button variant="contained" size="small" color="error"
+                        onClick={()=>setButtonClick(false)}>falsch</Button>
+            </Stack>
+            </div>
             {answer}
             <Outlet/>
         </div>)

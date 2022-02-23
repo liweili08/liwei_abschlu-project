@@ -16,7 +16,6 @@ export default function ExampleList(props) {
         <div>
             <div className="normal-link">
             <ul className="templet1">
-                <br/>
                 {findTheme.exampleList.map((mathExample) => {
                     return (
                         <li key={mathExample.id} className="templet1-li"><Link
@@ -24,12 +23,9 @@ export default function ExampleList(props) {
                         </li>
                     )
                 })}
-                <Outlet/>
             </ul>
+                <Outlet/>
             </div>
-            <br/>
-
-
         </div>
     )
 }

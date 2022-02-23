@@ -10,7 +10,7 @@ const theme=createTheme({
         h2:{
             fontSize: 50,
             marginBottom:30,
-            marginTop:30
+            marginTop:50
         }
     }
 })

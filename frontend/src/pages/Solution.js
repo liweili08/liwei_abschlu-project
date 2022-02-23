@@ -1,7 +1,7 @@
 import TeX from "@matejmazur/react-katex";
 import {useParams} from "react-router-dom";
 
-export default function Ergebnis(props){
+export default function Solution(props){
     const {themeList}=props;
     const {themeName, subtopic} = useParams();
     const findTheme = themeList.find((mathTheme) => {
