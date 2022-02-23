@@ -16,7 +16,7 @@ function AufgabeContent(props) {
     let answer;
     if (userAnswer === undefined) {
         answer = <NoAnswer/>
-    } else if (findHomework.result === buttonClick) {
+    } else if (findHomework.result === userAnswer) {
         answer = <RightAnswer/>
     } else {
         answer = <WrongAnswer/>
