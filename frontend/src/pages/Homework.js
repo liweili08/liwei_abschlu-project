@@ -14,7 +14,7 @@ function AufgabeContent(props) {
     useEffect(() => setUserAnswer(undefined), [findHomework]);
 
     let answer;
-    if (buttonClick === undefined) {
+    if (userAnswer === undefined) {
         answer = <NoAnswer/>
     } else if (findHomework.result === buttonClick) {
         answer = <RightAnswer/>
