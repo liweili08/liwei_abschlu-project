@@ -1,8 +1,8 @@
 import {Link, Outlet, useParams} from "react-router-dom";
+import "../styles/Templet1.css"
 
 
-
-export default function AufgabenGesamt(props){
+export default function HomeworkList(props){
     const {themeList}=props;
     const {themeName}=useParams();
     const findTheme= themeList.find((mathTheme)=>{
@@ -13,18 +13,16 @@ export default function AufgabenGesamt(props){
     }
     return(
         <div className="normal-link">
-            <ul>
+            <ul className="templet1">
                 {findTheme.homeworkList.map((mathHomework) => {
                     return (
-                        <li key={mathHomework.id}><Link
-                            to={mathHomework.subtopic}>Aufgabe: {mathHomework.subtopic}</Link>
+                        <li key={mathHomework.id} className="templet1-li"><Link
+                            to={mathHomework.subtopic} className="templet1-item">Aufgabe: {mathHomework.subtopic}</Link>
                         </li>
                     )
                 })}
-            <Outlet/>
             </ul>
-            <br/>
-
+            <Outlet/>
         </div>
     )
 }

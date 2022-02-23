@@ -1,0 +1,25 @@
+.info-text{
+    font-size: 2em;
+    margin:1em;
+}
+
+ul{
+    width: 100%;
+    padding: 1em 0;
+}
+
+.theme-li{
+    height: 4em;
+}
+
+.theme-item{
+    font-size: 1.5em;
+    text-decoration: none;
+}
+.theme-item:hover{
+    color: #ff6400;
+    font-size: 2.5em;
+}
+.theme-item:visited{
+    color: #f8d0b7;
+}

@@ -1,0 +1,59 @@
+body {
+    min-height: 100%;
+    margin: 0;
+    overflow: auto;
+}
+
+.themeName {
+    height: 100%;
+}
+
+.theme-name {
+    min-height: 100%;
+    font-size: 2em;
+    margin: 1em;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navi-link {
+    z-index: 2;
+    color: yellow;
+    background-color: #3c3d3f;
+    border-color: #3c3d3f;
+    border-top-width: 0;
+    border-top-width: 1px;
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.navi-link:active {
+    background-color: lightgray;
+    border-color: lightgray;
+}
+
+footer {
+    width: 100%;
+    /*position: absolute;*/
+    bottom: 1em;
+}
+
+.home-link {
+    margin-top: 2em;
+}
+
+.home-link a {
+    color: #f3d514;
+}
+
+.home-link a:hover {
+    color: #ff6400;
+}
+

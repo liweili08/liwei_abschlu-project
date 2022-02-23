@@ -1,9 +1,9 @@
 import {Link, Outlet, useParams} from "react-router-dom";
 import 'katex/dist/katex.min.css';
 
-import "./BeispieleGesamt.css"
+import "../styles/Templet1.css"
 
-export default function BeispieleGesamt(props) {
+export default function ExampleList(props) {
     const {themeList}=props;
     const {themeName}=useParams();
     const findTheme= themeList.find((mathTheme)=>{
@@ -15,21 +15,17 @@ export default function BeispieleGesamt(props) {
     return (
         <div>
             <div className="normal-link">
-            <ul className="beispiele">
-                <br/>
+            <ul className="templet1">
                 {findTheme.exampleList.map((mathExample) => {
                     return (
-                        <li key={mathExample.id}><Link
-                            to={mathExample.subtopic}>Beispiel: {mathExample.subtopic}</Link>
+                        <li key={mathExample.id} className="templet1-li"><Link
+                            to={mathExample.subtopic} className="templet1-item">Beispiel: {mathExample.subtopic}</Link>
                         </li>
                     )
                 })}
-                <Outlet/>
             </ul>
+                <Outlet/>
             </div>
-            <br/>
-
-
         </div>
     )
 }

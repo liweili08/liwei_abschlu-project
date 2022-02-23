@@ -1,6 +1,13 @@
 body{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
   background-color: #605d5d !important;
   color: lightgoldenrodyellow !important;
+}
+.App{
+  text-align: center;
+  margin-top: 60px;
 }
 
 /*.link {*/
@@ -15,3 +22,6 @@ body{
   color: #ff6400;
 }
 
+ul{
+  list-style: none;
+}

@@ -1,0 +1,24 @@
+.templet1 {
+    width: 100%;
+    padding: 1.5em 0 0 1.5em;
+    margin: auto;
+}
+
+.templet1-li {
+    height: 2em;
+    text-align: left;
+}
+
+.templet1-item {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.templet1-item:hover {
+    font-size: 1.3em;
+}
+
+.templet1-item:visited {
+    color: #f8d0b7;
+}
+
