@@ -1,11 +1,11 @@
 body {
     min-height: 100%;
     margin: 0;
+    overflow: auto;
 }
 
 .themeName {
     height: 100%;
-
 }
 
 .theme-name {
@@ -41,8 +41,8 @@ body {
 
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 1.5em;
+    /*position: absolute;*/
+    bottom: 1em;
 }
 
 .home-link {
