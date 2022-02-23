@@ -30,7 +30,7 @@ function AufgabeContent(props) {
                 <Button variant="contained" size="small" color="success"
                         onClick={()=>setUserAnswer(true)}>wahr</Button>
                 <Button variant="contained" size="small" color="error"
-                        onClick={()=>setButtonClick(false)}>falsch</Button>
+                        onClick={()=>setUserAnswer(false)}>falsch</Button>
             </Stack>
             </div>
             {answer}
