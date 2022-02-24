@@ -1,8 +1,7 @@
 import {Link, Outlet, useParams} from "react-router-dom";
 import "../styles/Templet1.css"
 
-export default function BasicList(props) {
-    const {themeList} = props;
+export default function BasicList({themeList}) {
     const {themeName}=useParams();
     const findTheme= themeList.find((mathTheme)=>{
         return mathTheme.themeName=== themeName;

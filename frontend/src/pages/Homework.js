@@ -9,14 +9,14 @@ import {Button, Stack} from "@mui/material";
 
 function AufgabeContent(props) {
     const {findHomework} = props;
-    const [buttonClick, setButtonClick] = useState(undefined);
+    const [userAnswer, setUserAnswer] = useState(undefined);
     //notwendig: React erkennt nicht dass buttonClick zurückgesetzt werden muss.
-    useEffect(() => setButtonClick(undefined), [findHomework]);
+    useEffect(() => setUserAnswer(undefined), [findHomework]);
 
     let answer;
-    if (buttonClick === undefined) {
+    if (userAnswer === undefined) {
         answer = <NoAnswer/>
-    } else if (findHomework.result === buttonClick) {
+    } else if (findHomework.result === userAnswer) {
         answer = <RightAnswer/>
     } else {
         answer = <WrongAnswer/>
@@ -28,9 +28,9 @@ function AufgabeContent(props) {
             <div className="buttons">
             <Stack direction="row" spacing={1}>
                 <Button variant="contained" size="small" color="success"
-                        onClick={()=>setButtonClick(true)}>wahr</Button>
+                        onClick={()=>setUserAnswer(true)}>wahr</Button>
                 <Button variant="contained" size="small" color="error"
-                        onClick={()=>setButtonClick(false)}>falsch</Button>
+                        onClick={()=>setUserAnswer(false)}>falsch</Button>
             </Stack>
             </div>
             {answer}
