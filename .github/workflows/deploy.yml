@@ -49,7 +49,7 @@ jobs:
     needs: build-backend
     environment:
       name: liwei-abschluss-project-heroku
-      url: https://abschlussproject-liwei.herokuapp.com/
+      url: https://hoemapp.herokuapp.com/
     env:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
     steps:
@@ -61,6 +61,6 @@ jobs:
       - name: Login to heroku
         run: heroku container:login
       - name: Push docker container
-        run: heroku container:push web -a abschlussproject-liwei
+        run: heroku container:push web -a hoemapp
       - name: Deploy docker container
-        run: heroku container:release web -a abschlussproject-liwei
+        run: heroku container:release web -a hoemapp
