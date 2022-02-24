@@ -1,22 +1,19 @@
 import {Link, Outlet} from "react-router-dom";
-
 import {Divider, ThemeProvider, Typography} from "@mui/material";
-
-import "../styles/HomePage.css"
 import {createTheme} from "@mui/material/styles";
+import "../styles/HomePage.css"
 
-const theme=createTheme({
-    typography:{
-        h2:{
+const theme = createTheme({
+    typography: {
+        h2: {
             fontSize: 50,
-            marginBottom:30,
-            marginTop:50
+            marginBottom: 30,
+            marginTop: 50
         }
     }
 })
 
-export default function HomePage(props) {
-    const {themeList} = props;
+export default function HomePage({themeList}) {
     return (
         <ThemeProvider theme={theme}>
             <div className="page-header">

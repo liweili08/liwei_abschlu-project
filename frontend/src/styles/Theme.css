@@ -24,9 +24,6 @@ body {
     z-index: 2;
     color: yellow;
     background-color: #3c3d3f;
-    border-color: #3c3d3f;
-    border-top-width: 0;
-    border-top-width: 1px;
     position: relative;
     display: block;
     padding: 0.5rem 1rem;

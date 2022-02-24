@@ -18,9 +18,9 @@ function App() {
     const [themeList, setThemeList] = useState([]);
     useEffect(() => {
         setupThemeList().catch(e => console.log(e.message))
-        // console.log(themeList)
     }, [])
     const setupThemeList = () => getThemeList().then(setThemeList)
+
     return (
         <BrowserRouter>
             <Routes>
@@ -40,7 +40,6 @@ function App() {
                 </Route>
             </Routes>
         </BrowserRouter>
-
     );
 }
 

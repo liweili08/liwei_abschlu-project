@@ -1,16 +1,16 @@
 import {Outlet, useParams} from "react-router-dom";
 import TeX from "@matejmazur/react-katex";
 import {useEffect, useState} from "react";
+import {Button, Stack} from "@mui/material";
 import WrongAnswer from "../components/WrongAnswer";
 import RightAnswer from "../components/RightAnswer";
 import NoAnswer from "../components/NoAnswer";
 import "../styles/Homework.css";
-import {Button, Stack} from "@mui/material";
+import 'katex/dist/katex.min.css';
 
-function AufgabeContent(props) {
-    const {findHomework} = props;
+function AufgabeContent({findHomework}) {
     const [userAnswer, setUserAnswer] = useState(undefined);
-    //notwendig: React erkennt nicht dass buttonClick zurückgesetzt werden muss.
+    //notwendig: React erkennt nicht dass userAnswer zurückgesetzt werden muss.
     useEffect(() => setUserAnswer(undefined), [findHomework]);
 
     let answer;
@@ -52,6 +52,5 @@ export default function Homework(props) {
         <div>
             <AufgabeContent findHomework={findHomework}/>
         </div>
-
     )
 }
