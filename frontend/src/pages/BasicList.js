@@ -9,6 +9,7 @@ export default function BasicList({themeList}) {
     if(!findTheme){
         return (<h1 >Thema nicht gefunden...</h1>)
     }
+
     return (
         <div className="normal-link">
             <ul className="templet1">

@@ -1,12 +1,10 @@
 package com.example.backend.controller;
 
-import com.example.backend.model.MathBasic;
 import com.example.backend.model.MathTheme;
 import com.example.backend.service.ThemeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.util.List;
 
 @RestController
@@ -23,6 +21,4 @@ public class ThemeController {
     public List<MathTheme> getAllTheme() {
         return themeService.getAllTheme();
     }
-    //
-
 }

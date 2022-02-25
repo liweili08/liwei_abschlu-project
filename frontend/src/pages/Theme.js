@@ -1,14 +1,13 @@
 import {Link, Outlet, useParams} from "react-router-dom";
-import "../styles/Thema.css"
+import "../styles/Theme.css"
 import {Breadcrumbs, Divider} from "@mui/material";
 
 function handleClick(event) {
     event.preventDefault();
 }
 
-export default function Theme(props) {
-    const {themeList} = props;
-    //themeName von url bekommen
+export default function Theme({themeList}) {
+    //get themeName from url
     const {themeName} = useParams()
     const findName = themeList.find((mathTheme) => {
         return mathTheme.themeName === themeName;
@@ -30,16 +29,11 @@ export default function Theme(props) {
                 </div>
             </div>
             <Divider color="lightgoldenrodyellow"/>
-
-            {/*<div className="push"></div>*/}
-
             <Outlet/>
 
             <footer className="home-link">
                 <Link to="/">Home</Link>
             </footer>
-
         </div>
     )
-
 }
